@@ -15,16 +15,24 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-void	bzero(void *s, size_t n);
-int	ft_isalnum(char chr);
+//-------------------------
+// - ctype.h -
+//-------------------------
 int	ft_isalpha(char chr);
-int	ft_isascii(int chr);
 int	ft_isdigit(char chr);
-int	ft_isprint(int chr);
-void	*memcpy(void *dest, const void *src, size_t n);
-void	*memmove(void *dest, const void *src, size_t n);
-void	*ft_memset(void *s, int c, size_t n);
-char	*ft_strchr(char *str, int chr);
-int	ft_strlen(char *str);
-int	ft_tolower(int chr);
-int	ft_toupper(int chr);
+
+//int	ft_isascii(int chr);
+//int	ft_isalnum(char chr);
+//int	ft_isprint(int chr);
+//int	ft_tolower(int chr);
+//int	ft_toupper(int chr);
+
+//-------------------------
+// - String.h -
+//-------------------------
+//void	bzero(void *s, size_t n);
+//void	*memcpy(void *dest, const void *src, size_t n);
+//void	*memmove(void *dest, const void *src, size_t n);
+//void	*ft_memset(void *s, int c, size_t n);
+//char	*ft_strchr(char *str, int chr);
+//int	ft_strlen(char *str);
