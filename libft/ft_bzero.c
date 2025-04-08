@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   bzero.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brunmigu <brunmigu@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: brunmigu <brunmigu@students.42porto.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/31 11:28:54 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/04/07 12:43:48 by brunmigu         ###   ########.fr       */
+/*   Created: 2025/04/08 12:51:03 by brunmigu          #+#    #+#             */
+/*   Updated: 2025/04/08 13:01:23 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(char chr)
+#include "libft.h"
+
+void	bzero(void *s, size_t n)
 {
-	if (chr >= 48 && chr <= 57 || chr >= 65 && chr <= 90
-		|| chr >= 97 && chr <= 122)
-		return (1);
-	return (0);
+	unsigned char	*ptr;
+	size_t			counter;
+
+	counter = 0;
+	ptr = (unsigned char *)s;
+	while (counter < n)
+	{
+		ptr[counter] = '0';
+		counter++;
+	}
 }
