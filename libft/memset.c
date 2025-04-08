@@ -6,7 +6,7 @@
 /*   By: brunmigu <brunmigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 10:10:52 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/04/07 13:38:17 by brunmigu         ###   ########.fr       */
+/*   Updated: 2025/04/08 13:01:24 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *s, int c, size_t n)
 
 	ptr = (unsigned char *)s;
 	counter = 0;
-	while (counter != n)
+	while (counter < n)
 	{
 		ptr[counter] = (unsigned char)c;
 		counter++;
