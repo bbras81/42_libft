@@ -21,11 +21,3 @@ int	ft_strlen(char *str)
 	}
 	return (count);
 }
-/*
-#include <stdio.h>
-int main(void) {
-  char *string;
-
-  string = "Hello World!";
-  printf("%d\n", ft_strlen(string));
-}*/

@@ -13,6 +13,21 @@
 NAME = libft.a
 SRCS = ft_isalpha.c \
 			 ft_isdigit.c \
+			 ft_isascii.c \
+			 ft_isalnum.c \
+			 ft_isprint.c\
+			 ft_tolower.c \
+			 ft_toupper.c \
+			 ft_bzero.c \
+			 ft_memset.c \
+			 ft_memcpy.c \
+			 ft_memmove.c \
+			 ft_strchr.c \
+			 ft_strlen.c \
+
+
+
+
 
 OBJS = ${SRCS:.c=.o}
 

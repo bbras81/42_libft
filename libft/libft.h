@@ -13,26 +13,28 @@
 # define LIBFT_H
 
 # include <stdlib.h>
-# include <unistd.h>
 
 //-------------------------
 // - ctype.h -
 //-------------------------
-int	ft_isalpha(char chr);
-int	ft_isdigit(char chr);
+int	ft_isalpha(int chr);
+int	ft_isdigit(int chr);
+int	ft_isascii(int chr);
+int	ft_isalnum(int chr);
+int	ft_isprint(int chr);
+int	ft_tolower(int chr);
+int	ft_toupper(int chr);
 
-//int	ft_isascii(int chr);
-//int	ft_isalnum(char chr);
-//int	ft_isprint(int chr);
-//int	ft_tolower(int chr);
-//int	ft_toupper(int chr);
 
+//-------------------------
+// - Strings.h -
+//-------------------------
+void	ft_bzero(void *s, size_t n);
+void	*ft_memset(void *s, int c, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
 //-------------------------
 // - String.h -
 //-------------------------
-//void	bzero(void *s, size_t n);
-//void	*memcpy(void *dest, const void *src, size_t n);
-//void	*memmove(void *dest, const void *src, size_t n);
-//void	*ft_memset(void *s, int c, size_t n);
-//char	*ft_strchr(char *str, int chr);
-//int	ft_strlen(char *str);
+char	*ft_strchr(char *str, int chr);
+int	ft_strlen(char *str);

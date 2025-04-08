@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	*memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	const unsigned char	*s;
 	unsigned char		*d;
@@ -28,32 +28,3 @@ void	*memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h> // para comparação
-
-// Declaração da tua função
-void	*memcpy(void *dest, const void *src, size_t n);
-
-int	main(void)
-{
-	char	origem[] = "Hello, world!";
-
-	char destino[20];          // espaço suficiente
-	char destino_original[20]; // para comparar com a função original
-	// Usar a tua função memcpy
-	memcpy(destino, origem, strlen(origem) + 1); // +1 para incluir o '\0'
-	// Usar a função original do C para comparação
-	memcpy(destino_original, origem, strlen(origem) + 1);
-	// Mostrar resultados
-	printf("Origem:            %s\n", origem);
-	printf("Destino (custom):  %s\n", destino);
-	printf("Destino (original):%s\n", destino_original);
-	// Verificar se são iguais
-	if (strcmp(destino, destino_original) == 0)
-		printf("✅ A função memcpy está a funcionar corretamente!\n");
-	else
-		printf("❌ Há um problema na função memcpy.\n");
-	return (0);
-}*/
