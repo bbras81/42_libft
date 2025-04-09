@@ -6,25 +6,24 @@
 /*   By: brunmigu <brunmigu@students.42porto.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 15:25:44 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/04/08 15:38:27 by brunmigu         ###   ########.fr       */
+/*   Updated: 2025/04/09 17:02:13 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# define LIBFT_H
+#define LIBFT_H
 
-# include <stdlib.h>
+#include <stdlib.h>
 
 //-------------------------
 // - ctype.h -
 //-------------------------
-int	ft_isalpha(int chr);
-int	ft_isdigit(int chr);
-int	ft_isascii(int chr);
-int	ft_isalnum(int chr);
-int	ft_isprint(int chr);
-int	ft_tolower(int chr);
-int	ft_toupper(int chr);
-
+int		ft_isalpha(int chr);
+int		ft_isdigit(int chr);
+int		ft_isascii(int chr);
+int		ft_isalnum(int chr);
+int		ft_isprint(int chr);
+int		ft_tolower(int chr);
+int		ft_toupper(int chr);
 
 //-------------------------
 // - Strings.h -
@@ -37,5 +36,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 // - String.h -
 //-------------------------
 char	*ft_strchr(char *str, int chr);
-int	ft_strlen(char *str);
+int		ft_strlen(char *str);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dsize);
+size_t	ft_strlcat(char *dst, const char *src, size_t dsize);
+char *ft_strrchr(const char *s, int c);
+int	ft_strncmp(const char *s1, const char *s2, size_t n);
