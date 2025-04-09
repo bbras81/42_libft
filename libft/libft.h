@@ -38,3 +38,4 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 //-------------------------
 char	*ft_strchr(char *str, int chr);
 int	ft_strlen(char *str);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dsize);
