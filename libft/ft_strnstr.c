@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-char *ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t counter_e;
-	size_t counter_g;
+	size_t	counter_e;
+	size_t	counter_g;
 
 	counter_g = 0;
 	counter_e = 0;
@@ -23,11 +23,12 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 		return ((char *)haystack);
 	while (haystack[counter_g] && counter_g < len)
 	{
-	    while (haystack[counter_g + counter_e] == needle[counter_e] && haystack[counter_g + counter_e] && counter_g + counter_e < len)
+		while (haystack[counter_g + counter_e] == needle[counter_e]
+			&& haystack[counter_g + counter_e] && counter_g + counter_e < len)
 		{
 			counter_e++;
 			if (needle[counter_e] == 0)
-                return ((char *) haystack + counter_g);
+				return ((char *)haystack + counter_g);
 		}
 		counter_g++;
 		counter_e = 0;
@@ -36,7 +37,8 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 }
 /*
 #include <stdio.h>
-int main()
+
+int	main(void)
 {
 	char *str = "lorem ipsum dolor sit amet";
 	printf("%s\n", ft_strnstr(str, "lorem",15));
