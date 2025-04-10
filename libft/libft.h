@@ -6,7 +6,7 @@
 /*   By: brunmigu <brunmigu@students.42porto.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 15:25:44 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/04/10 12:33:18 by brunmigu         ###   ########.fr       */
+/*   Updated: 2025/04/10 18:00:03 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,3 +44,4 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dsize);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+int		ft_atoi(const char *nptr);
