@@ -6,7 +6,7 @@
 /*   By: brunmigu <brunmigu@students.42porto.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 17:01:48 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/04/10 18:07:51 by brunmigu         ###   ########.fr       */
+/*   Updated: 2025/04/10 18:11:58 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int	isspace(int c)
 		return (1);
 	return (0);
 }
+
 int	ft_atoi(const char *nptr)
 {
 	int	counter;
@@ -28,9 +29,7 @@ int	ft_atoi(const char *nptr)
 	sign = 1;
 	nbr = 0;
 	while (isspace(*nptr))
-	{
 		nptr++;
-	}
 	if (*nptr == '+' || *nptr == '-')
 	{
 		if (*nptr == '-')
