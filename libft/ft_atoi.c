@@ -12,17 +12,17 @@
 
 #include "libft.h"
 
-int isspace(int c)
+int	isspace(int c)
 {
 	if (c == 9 || c == 10 || c == 11 || c == 12 || c == 13 || c == 32)
 		return (1);
 	return (0);
 }
-int ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
-	int counter;
-	int sign;
-	int nbr;
+	int	counter;
+	int	sign;
+	int	nbr;
 
 	counter = 0;
 	sign = 1;
@@ -42,7 +42,7 @@ int ft_atoi(const char *nptr)
 	while (*nptr && *nptr >= 48 && *nptr <= 57)
 	{
 		nbr *= 10;
-		nbr += *nptr - 48; 
+		nbr += *nptr - 48;
 		nptr++;
 	}
 	return (nbr * sign);
@@ -50,7 +50,8 @@ int ft_atoi(const char *nptr)
 
 /*
 #include <stdio.h>
-int main()
+
+int	main(void)
 {
 	int res;
 	char *nbrs = "+548";
