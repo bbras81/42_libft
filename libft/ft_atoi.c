@@ -21,11 +21,9 @@ int	isspace(int c)
 
 int	ft_atoi(const char *nptr)
 {
-	int	counter;
 	int	sign;
 	int	nbr;
 
-	counter = 0;
 	sign = 1;
 	nbr = 0;
 	while (isspace(*nptr))
