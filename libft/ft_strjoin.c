@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brunmigu <brunmigu@students.42porto.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/11 17:39:52 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/04/12 11:59:10 by brunmigu         ###   ########.fr       */
+/*   Created: 2025/04/12 11:45:47 by brunmigu          #+#    #+#             */
+/*   Updated: 2025/04/12 12:00:59 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*newstr;
+	char	*str_join;
 	size_t	counter;
+	size_t	counter_s2;
 
 	counter = 0;
-	newstr = (char *)malloc(ft_strlen(s1) * sizeof(char) + 1);
-	if (!newstr)
+	counter_s2 = 0;
+	str_join = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
+	if (!str_join)
 		return (NULL);
 	while (s1[counter])
 	{
-		newstr[counter] = s1[counter];
+		str_join[counter] = s1[counter];
 		counter++;
 	}
-	newstr[counter] = '\0';
-	return (newstr);
+	while (s2[counter_s2])
+	{
+		str_join[counter + counter_s2] = s2[counter_s2];
+		counter_s2++;
+	}
+	str_join[counter + counter_s2] = 0;
+	return (str_join);
 }
