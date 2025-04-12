@@ -17,18 +17,21 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	counter;
 	char	*substr;
 
-	counter = start;
-	if (ft_strlen(s) < len)
+	counter = 0;
+	if (!s)
 		return (NULL);
-	if ((start + len) > ft_strlen(s))
-		return (NULL);
-	substr = (char *)malloc(sizeof(char) * len + 1);
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	substr = (char *)malloc(sizeof(char) * len);
 	if (!substr)
 		return (NULL);
-	while (s[counter] && counter < len)
+	while (counter < len)
 	{
-		substr[counter] = s[counter];
+		substr[counter] = s[start];
 		counter++;
+		start++;
 	}
 	substr[counter] = '\0';
 	return (substr);
