@@ -11,49 +11,21 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
-
-int	trim(const char *set, char c)
-{
-	int	counter;
-
-	counter = 0;
-	while (set[counter])
-	{
-		if (set[counter] == c)
-			return (1);
-		counter++;
-	}
-	return (0);
-}
 
 char	*ft_strtrim(const char *s1, const char *set)
 {
-	char	*ret;
 	size_t	counter_start;
 	size_t	counter_end;
-	size_t	counter;
-	size_t	len;
 
 	counter_start = 0;
+	if (!s1 || !set || s1[0] == '\0')
+		return (ft_strdup(""));
 	counter_end = ft_strlen(s1) - 1;
-	while (trim(set, s1[counter_start]))
+	while (s1[counter_start] && ft_strchr(set, s1[counter_start]))
 		counter_start++;
-	while (trim(set, s1[counter_end]))
+	while (counter_end > counter_start && ft_strchr(set, s1[counter_end]))
 		counter_end--;
-	len = counter_end - (counter_start - 1);
-	ret = ft_calloc(len + 1, sizeof(char));
-	if (!ret)
-		return (NULL);
-	counter = 0;
-	while (counter_start <= counter_end)
-	{
-		ret[counter] = s1[counter_start];
-		counter++;
-		counter_start++;
-	}
-	ret[counter_start] = 0;
-	return (ret);
+	return (ft_substr(s1, counter_start, counter_end - counter_start + 1));
 }
 /*
 #include <stdio.h>
