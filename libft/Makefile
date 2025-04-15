@@ -6,7 +6,7 @@
 #    By: brunmigu <brunmigu@students.42porto.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/08 14:41:38 by brunmigu          #+#    #+#              #
-#    Updated: 2025/04/12 11:59:09 by brunmigu         ###   ########.fr        #
+#    Updated: 2025/04/15 17:17:42 by brunmigu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,7 @@ SRCS = ft_isalpha.c \
 			 ft_strjoin.c \
 			 ft_strtrim.c \
 			 ft_split.c \
+			 ft_itoa.c \
 
 OBJS = ${SRCS:.c=.o}
 
