@@ -6,7 +6,7 @@
 #    By: brunmigu <brunmigu@students.42porto.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/08 14:41:38 by brunmigu          #+#    #+#              #
-#    Updated: 2025/04/17 15:39:53 by brunmigu         ###   ########.fr        #
+#    Updated: 2025/04/17 16:46:02 by brunmigu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,9 +51,9 @@ BONUS_SRCS = ft_lstnew.c \
 	ft_lstadd_front.c \
 	ft_lstsize.c \
 	ft_lstlast.c \
-	#ft_lstadd_back.c \
-	#ft_lstdelone.c \
-	#ft_lstclear.c \
+	ft_lstadd_back.c \
+	ft_lstdelone.c \
+	ft_lstclear.c \
 	#ft_lstiter.c \
 	#ft_lstmap.c
 
