@@ -6,7 +6,7 @@
 #    By: brunmigu <brunmigu@students.42porto.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/08 14:41:38 by brunmigu          #+#    #+#              #
-#    Updated: 2025/04/15 17:17:42 by brunmigu         ###   ########.fr        #
+#    Updated: 2025/04/17 12:38:05 by brunmigu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,12 @@ SRCS = ft_isalpha.c \
 			 ft_strtrim.c \
 			 ft_split.c \
 			 ft_itoa.c \
+			 ft_strmapi.c \
+			 ft_striteri.c \
+			 ft_putchar_fd.c \
+			 ft_putstr_fd.c \
+			 ft_putendl_fd.c \
+			 ft_putnbr_fd.c \
 
 OBJS = ${SRCS:.c=.o}
 

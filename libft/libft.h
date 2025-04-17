@@ -6,13 +6,14 @@
 /*   By: brunmigu <brunmigu@students.42porto.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 15:25:44 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/04/15 17:17:02 by brunmigu         ###   ########.fr       */
+/*   Updated: 2025/04/17 12:37:40 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #define LIBFT_H
 
 #include <stdlib.h>
+#include <unistd.h>
 
 //-------------------------
 // - ctype.h -
@@ -52,3 +53,9 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(const char *s1, const char *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
