@@ -11,9 +11,9 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int		ft_int_len(int n);
+
 char	*ft_itoa(int n)
 {
 	char	*result;
@@ -25,40 +25,44 @@ char	*ft_itoa(int n)
 	result = ft_calloc(nbr_len + 1, sizeof(char));
 	if (!result)
 		return (NULL);
-	if (n < 0)
+	if (nbr == 0)
+		return (result[0] = '0', result[1] = '\0', result);
+	if (nbr < 0)
 	{
 		nbr *= -1;
 		result[0] = '-';
-		nbr_len -= 1;
 	}
-	while (nbr_len > 0)
+	result[nbr_len] = '\0';
+	while (nbr > 0)
 	{
-		result[--nbr_len] = (n % 10) + 48;
-		n /= 10;
+		result[--nbr_len] = nbr % 10 + 48;
+		nbr /= 10;
 	}
 	return (result);
 }
 
 int	ft_int_len(int n)
 {
-	int	counter;
+	int		counter;
+	long	nbr;
 
+	nbr = n;
 	counter = 0;
-	if (n == 0)
+	if (nbr == 0)
 		return (1);
-	if (n < 0)
+	if (nbr < 0)
 	{
-		n = -n;
-		counter = 1;
+		nbr *= -1;
+		counter ++;
 	}
-	while (n > 0)
+	while (nbr > 0)
 	{
-		n /= 10;
+		nbr /= 10;
 		counter++;
 	}
 	return (counter);
 }
-
+/*
 int	main(void)
 {
 	int		nbr;
@@ -68,4 +72,4 @@ int	main(void)
 	str = ft_itoa(nbr);
 	printf("%s", str);
 	free(str);
-}
+}*/
