@@ -11,10 +11,10 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
+#include <stdio.h>
 
-void	ft_free(char **res);
-int		word_count(char const *s, char c);
+static void	ft_free(char **res);
+static int		word_count(char const *s, char c);
 
 char	**ft_split(const char *s, char c)
 {
@@ -45,16 +45,17 @@ char	**ft_split(const char *s, char c)
 	return (res[counter_res] = NULL, res);
 }
 
-void	ft_free(char **res)
+static void	ft_free(char **res)
 {
 	int	i;
 
 	i = -1;
 	while (res[++i])
 		free(res[i]);
+	free(res);
 }
 
-int	word_count(char const *s, char c)
+static int	word_count(char const *s, char c)
 {
 	size_t	counter;
 	size_t	counter_wrd;
@@ -78,16 +79,23 @@ int	word_count(char const *s, char c)
 	}
 	return (counter_wrd);
 }
-/*
-int	main(void)
-{
-	char	*str;
-	char	**test;
-	int		counter;
 
-	str = "                  olol";
-	test = ft_split(str, ' ');
-	counter = 0;
-	while (test[counter])
-		printf("%s\n", *test++);
-}*/
+int main(void)
+{
+    char *str = "                  olol";
+    char **test = ft_split(str, ' ');
+    char **temp = test; // Guardamos uma cópia do ponteiro original
+    int counter = 0;
+    
+    if (test)
+    {
+        while (test[counter])
+        {
+            printf("%s\n", test[counter]);
+            counter++;
+        }
+        ft_free(temp); // Liberamos a memória usando o ponteiro original
+    }
+    
+    return 0;
+}
