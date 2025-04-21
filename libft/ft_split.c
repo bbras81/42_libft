@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brunmigu <brunmigu@students.42porto.com>   +#+  +:+       +#+        */
+/*   By: brunmigu <brunmigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 11:04:11 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/04/14 11:24:19 by brunmigu         ###   ########.fr       */
+/*   Updated: 2025/04/22 00:56:08 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,6 @@ static int	word_count(char const *s, char c)
 	}
 	return (counter_wrd);
 }
-<<<<<<< HEAD
 
 int	main(void)
 {
@@ -92,25 +91,4 @@ int	main(void)
 	counter = 0;
 	while (test[counter])
 		printf("%s\n", *test++);
-=======
-
-int main(void)
-{
-    char *str = "                  olol";
-    char **test = ft_split(str, ' ');
-    char **temp = test; // Guardamos uma cópia do ponteiro original
-    int counter = 0;
-    
-    if (test)
-    {
-        while (test[counter])
-        {
-            printf("%s\n", test[counter]);
-            counter++;
-        }
-        ft_free(temp); // Liberamos a memória usando o ponteiro original
-    }
-    
-    return 0;
->>>>>>> refs/remotes/origin/main
 }
