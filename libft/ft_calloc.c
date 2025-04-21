@@ -16,6 +16,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*temp;
 
+	if (!count || !size)
+		return (NULL);
 	if (count == 0 || size == 0)
 		return (ft_strdup(""));
 	if (size != 0 && count > SIZE_MAX / size)
