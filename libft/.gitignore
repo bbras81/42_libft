@@ -1,0 +1,11 @@
+
+# Ignorar ficheiros de build
+a.out
+*.o
+
+# Ignorar o executável de testes
+my_tests
+test_libft
+
+# Ignorar ficheiro de testes personalizado
+my_tests.c
