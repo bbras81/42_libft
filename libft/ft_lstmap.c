@@ -35,8 +35,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		buffer_node = ft_lstnew(temp);
 		if (!buffer_node)
 		{
+      del(temp);
 			ft_lstclear(&new_l, del);
-			del(temp);
 			return (NULL);
 		}
 		ft_lstadd_back(&new_l, buffer_node);
