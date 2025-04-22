@@ -11,10 +11,9 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static void	ft_free(char **res);
-static int		word_count(char const *s, char c);
+static int	word_count(char const *s, char c);
 
 char	**ft_split(const char *s, char c)
 {
@@ -79,7 +78,7 @@ static int	word_count(char const *s, char c)
 	}
 	return (counter_wrd);
 }
-
+/*
 int	main(void)
 {
 	char	*str;
@@ -91,4 +90,4 @@ int	main(void)
 	counter = 0;
 	while (test[counter])
 		printf("%s\n", *test++);
-}
+}*/
