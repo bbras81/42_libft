@@ -11,15 +11,18 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str_join;
 	size_t	counter;
 	size_t	counter_s2;
-
+	
 	counter = 0;
 	counter_s2 = 0;
+	if(!s1 || !s2)
+		return (strdup(""));
 	str_join = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
 	if (!str_join)
 		return (NULL);

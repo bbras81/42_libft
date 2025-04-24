@@ -21,9 +21,8 @@ char	**ft_split(const char *s, char c)
 	size_t	counter_res;
 	size_t	start_word;
 	char	**res;
-
 	res = ft_calloc(word_count(s, c) + 1, sizeof(char *));
-	if (!res)
+	if (!res || !s)
 		return (NULL);
 	counter = 0;
 	counter_res = 0;
