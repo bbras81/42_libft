@@ -10,18 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <stdarg.h>
+#include <stdio.h>
 
 int	printf(const char *str, ...)
 {
-	int	counter;
+	int		counter;
+	va_list	args;
 
+	va_start(args, str);
+	va_end(args);
 	counter = 0;
 	while (str[counter])
 	{
-		if (str[counter] != '%')
+		if (str[counter] == '%' && str[counter + 1] != '\n')
 		{
-
+		}
+		else
+		{
 		}
 	}
 }
