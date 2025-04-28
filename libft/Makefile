@@ -57,30 +57,30 @@ BONUS_SRCS = ft_lstnew.c \
 	ft_lstiter.c \
 	ft_lstmap.c
 
-OBJS = ${SRCS:.c=.o}
-BONUS_OBJS = ${BONUS_SRCS:.c=.o}
+OBJS = $(SRCS:.c=.o)
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 COMPILER = cc
-INCLUDE = -I .
+INCLUDE = -I.
+
+all: $(NAME)
 
 %.o: %.c
-	${COMPILER} ${CFLAGS} ${INCLUDE} -c $< -o $@
+	$(COMPILER) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
-${NAME}: ${OBJS}
-	ar rcs ${NAME} ${OBJS}
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
-all: ${NAME}
-
-bonus: ${OBJS} ${BONUS_OBJS}
-	ar rcs ${NAME} ${OBJS} ${BONUS_OBJS}
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 clean:
-	${RM} ${OBJS} ${BONUS_OBJS}
+	$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
-	${RM} ${NAME}
+	$(RM) $(NAME)
 
 re: fclean all
 
