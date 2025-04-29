@@ -25,9 +25,11 @@ int	printf(const char *str, ...)
 	{
 		if (str[counter] == '%' && str[counter + 1] != '\n')
 		{
+      
 		}
 		else
 		{
+
 		}
 	}
 }
