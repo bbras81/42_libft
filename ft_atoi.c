@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/**
+ * @brief Converts a string to an integer.
+ *
+ * @param nptr The string to convert.
+ * @return int The converted integer value.
+ */
+
 static int	ft_isspace(int c)
 {
 	return (c == ' ' || (c >= 9 && c <= 13));
@@ -42,15 +49,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (nbr * sign);
 }
-
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	int res;
-	char *nbrs = "+548";
-	res = ft_atoi(nbrs);
-	printf("%d\n", res);
-	return (0);
-}*/

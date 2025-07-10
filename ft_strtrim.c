@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/**
+ * @brief Trims characters from the beginning and end of a string.
+ *
+ * @param s1 The string to trim.
+ * @param set The set of characters to trim.
+ * @return char* The trimmed string.
+ */
 char	*ft_strtrim(const char *s1, const char *set)
 {
 	size_t	counter_start;
@@ -27,13 +34,3 @@ char	*ft_strtrim(const char *s1, const char *set)
 		counter_end--;
 	return (ft_substr(s1, counter_start, counter_end - counter_start + 1));
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	*str;
-
-	str = "  \t \t \n   \n\n\n\t";
-	printf("%s", ft_strtrim(str, ""));
-}*/

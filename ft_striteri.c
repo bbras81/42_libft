@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/**
+ * @brief Applies a function to each character of a string (by reference).
+ *
+ * @param s The string to modify.
+ * @param f The function to apply.
+ */
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	counter;

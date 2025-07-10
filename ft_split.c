@@ -15,6 +15,13 @@
 static void	ft_free(char **res);
 static int	word_count(char const *s, char c);
 
+/**
+ * @brief Splits a string into an array of strings using a delimiter.
+ *
+ * @param s The string to split.
+ * @param c The delimiter character.
+ * @return char** An array of strings, NULL-terminated.
+ */
 char	**ft_split(const char *s, char c)
 {
 	size_t	counter;
@@ -78,16 +85,3 @@ static int	word_count(char const *s, char c)
 	}
 	return (counter_wrd);
 }
-/*
-int	main(void)
-{
-	char	*str;
-	char	**test;
-	int		counter;
-
-	str = "xxxxxxxxhello!";
-	test = ft_split(str, 'x');
-	counter = 0;
-	while (test[counter])
-		printf("%s\n", *test++);
-}*/

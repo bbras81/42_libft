@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/**
+ * @brief Duplicates a string.
+ *
+ * @param s1 The string to duplicate.
+ * @return char* The newly allocated copy of the string.
+ */
 char	*ft_strdup(const char *s1)
 {
 	char	*newstr;

@@ -10,8 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
+#include "libft.h"
 
+/**
+ * @brief Outputs a string followed by a newline to the given file descriptor.
+ *
+ * @param s The string to output.
+ * @param fd The file descriptor.
+ */
 void	ft_putendl_fd(char *s, int fd)
 {
 	while (*s)
@@ -21,9 +27,3 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	write(fd, "\n", 1);
 }
-/*
-int main()
-{
-	char *str = "Ola mundo! 42";
-	ft_putendl_fd(str, 1);
-}*/

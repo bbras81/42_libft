@@ -12,12 +12,18 @@
 
 #include "libft.h"
 
+/**
+ * @brief Outputs a string to the given file descriptor.
+ *
+ * @param s The string to output.
+ * @param fd The file descriptor.
+ */
 void	ft_putstr_fd(char *s, int fd)
 {
 	write(fd, s, ft_strlen(s));
 }
 /*
-int main()
+int	main(void)
 {
 	char *str = "Ola mundo! 42";
 	ft_putstr_fd(str, 1);

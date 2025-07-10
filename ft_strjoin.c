@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/**
+ * @brief Joins two strings into a new string.
+ *
+ * @param s1 First string.
+ * @param s2 Second string.
+ * @return char* The newly allocated joined string.
+ */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str_join;

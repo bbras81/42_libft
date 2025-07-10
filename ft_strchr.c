@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/**
+ * @brief Locates the first occurrence of a character in a string.
+ *
+ * @param str The string to search in.
+ * @param chr The character to find.
+ * @return char* Pointer to the located character, or NULL if not found.
+ */
 char	*ft_strchr(const char *str, int chr)
 {
 	while (*str)

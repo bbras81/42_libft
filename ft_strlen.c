@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/**
+ * @brief Calculates the length of a string.
+ *
+ * @param s The string to measure.
+ * @return size_t The number of characters in the string
+ * @return (excluding the null terminator).
+ */
 size_t	ft_strlen(const char *str)
 {
 	int	count;

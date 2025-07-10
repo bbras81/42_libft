@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/**
+ * @brief Converts an integer to a string.
+ *
+ * @param n The integer to convert.
+ * @return char* The newly allocated string representing the integer.
+ */
 int		ft_int_len(int n);
 
 char	*ft_itoa(int n)
@@ -53,7 +59,7 @@ int	ft_int_len(int n)
 	if (nbr < 0)
 	{
 		nbr *= -1;
-		counter ++;
+		counter++;
 	}
 	while (nbr > 0)
 	{

@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/**
+ * @brief Allocates memory based on the count and size and fills it with null's.
+ *
+ * @param count Number of elements.
+ * @param size Size of each element.
+ * @return void* Pointer to the allocated memory.
+ */
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*temp;

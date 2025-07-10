@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/**
+ * @brief Sets a block of memory to zero.
+ *
+ * @param s Pointer to the memory area.
+ * @param n Number of bytes to set to zero.
+ */
 void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
