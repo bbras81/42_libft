@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brunmigu <brunmigu@students.42porto.com>   +#+  +:+       +#+        */
+/*   By: brunmigu <brunmigu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 10:58:48 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/03/31 11:18:42 by brunmigu         ###   ########.fr       */
+/*   Updated: 2025/07/10 22:19:03 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 /**
  * @brief Checks if a character is a digit.
